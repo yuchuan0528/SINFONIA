@@ -5,7 +5,7 @@ API
 ====
 
 
-Import SINFONAI::
+Import SINFONIA::
 
    import sinfonia
    
@@ -26,13 +26,15 @@ utils
 
 .. autosummary::
     :toctree: .
+    
     utils.setup_seed
     utils.get_N_clusters
 
 metrics
 -----------
 .. module::sinfonia.metrics
-.. currentmodule::metrics
+.. currentmodule::sinfonia
+
 
 .. autosummary::
     :toctree: .

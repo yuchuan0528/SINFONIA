@@ -15,10 +15,11 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Release" href="../release/index.html" />
+    <link rel="next" title="sinfonia.statistics.spatially_variable_genes" href="sinfonia.statistics.spatially_variable_genes.html" />
     <link rel="prev" title="Tutorial" href="../tutorial/index.html" /> 
 </head>
 
@@ -42,9 +43,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#statistics">statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#utils">utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#metrics">metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#statistics">statistics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sinfonia.statistics.spatially_variable_genes.html">sinfonia.statistics.spatially_variable_genes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sinfonia.utils.setup_seed.html">sinfonia.utils.setup_seed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sinfonia.utils.get_N_clusters.html">sinfonia.utils.get_N_clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#metrics">metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sinfonia.metrics.clustering_metrics.html">sinfonia.metrics.clustering_metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sinfonia.metrics.mean_average_precision.html">sinfonia.metrics.mean_average_precision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sinfonia.metrics.mean_cross_validation_accuracy.html">sinfonia.metrics.mean_cross_validation_accuracy</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../release/index.html">Release</a></li>
@@ -74,20 +87,86 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <span class="target" id="module-sinfonia"></span><section id="api">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<span class="target" id="module-sinfonia"></span><section id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
-<p>Import SINFONAI:</p>
+<p>Import SINFONIA:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sinfonia</span>
 </pre></div>
 </div>
 <section id="statistics">
 <h2>statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="sinfonia.statistics.spatially_variable_genes.html#sinfonia.statistics.spatially_variable_genes" title="sinfonia.statistics.spatially_variable_genes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">statistics.spatially_variable_genes</span></code></a>(adata[, ...])</p></td>
+<td><p>Identify spatially variable genes by SINFONIA.</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="utils">
 <h2>utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="sinfonia.utils.setup_seed.html#sinfonia.utils.setup_seed" title="sinfonia.utils.setup_seed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils.setup_seed</span></code></a>(seed)</p></td>
+<td><p>Set random seed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sinfonia.utils.get_N_clusters.html#sinfonia.utils.get_N_clusters" title="sinfonia.utils.get_N_clusters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils.get_N_clusters</span></code></a>(adata, n_cluster[, ...])</p></td>
+<td><p>Tune the resolution parameter in clustering to make the number of clusters and the specified number as close as possible.</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="metrics">
 <h2>metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="sinfonia.metrics.clustering_metrics.html#sinfonia.metrics.clustering_metrics" title="sinfonia.metrics.clustering_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.clustering_metrics</span></code></a>(adata, target, pred)</p></td>
+<td><p>Evaluate clustering performance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sinfonia.metrics.mean_average_precision.html#sinfonia.metrics.mean_average_precision" title="sinfonia.metrics.mean_average_precision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.mean_average_precision</span></code></a>(embedding, labels)</p></td>
+<td><p>Evaluate mean average precision.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="sinfonia.metrics.mean_cross_validation_accuracy.html#sinfonia.metrics.mean_cross_validation_accuracy" title="sinfonia.metrics.mean_cross_validation_accuracy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.mean_cross_validation_accuracy</span></code></a>(...)</p></td>
+<td><p>Evaluate mean cross-validation accuracy.</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -96,7 +175,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../tutorial/index.html" class="btn btn-neutral float-left" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../release/index.html" class="btn btn-neutral float-right" title="Release" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sinfonia.statistics.spatially_variable_genes.html" class="btn btn-neutral float-right" title="sinfonia.statistics.spatially_variable_genes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
